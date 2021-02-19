@@ -18,9 +18,9 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-#!your project app urls should be registered in the main app urls
+# !your project app urls should be registered in the main app urls
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('hic_app.urls')),
-    path('hospitals/', include('hospitals.urls'))
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+                  path('admin/', admin.site.urls),
+                  path('', include('hic_app.urls')),
+                  path('hospitals/', include('hospital.urls'))
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,41 +8,39 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <a class="navbar-brand" href=" {% url 'index' %} ">HIC</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="{% url 'allhospitals' %}">Hospitals</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="#">Patients</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="#">Insurance Companies</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-dark" href="#">Staff</a>
-      </li>
-    </ul>
-  </div>
-    <title>Hello, world!</title>
+    <title> Insurance Hospital Data </title>
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    </nav>
-    <div class="container">
+  <div class="container">
       {% block content %}
+      <h4> Hospitals :  </h4>
 
-      {% endblock%}
+      <table class="table">
+         <thead>
+             <tr>
+                 <th scope="col">#</th>
+                 <th scope="col">Logo</th>
+                 <th scope="col">Name</th>
+                 <th scope="col">Category</th>
+                 <th scope="col">Address</th>
+             </tr>
+         </thead>
+    <tbody>
+       <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+       </tr>
 
-    <footer class="mt-4">
-      &copy; 2021 HIC.com. All rights reserved
-    </footer>
-    </div>
+    </tbody>
+</table>
+
+      {% endblock %}
+  </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
